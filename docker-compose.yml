@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: music_catalog_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_DATABASE=music_catalog
+      - MYSQL_USER=dev
+      - MYSQL_PASSWORD=dev123
+    ports:
+      - "3306:3306"
+    volumes:
+      - music_catalog_data:/var/lib/mysql
+
+volumes: 
+  music_catalog_data:
+  
