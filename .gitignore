@@ -1,0 +1,27 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database / cache
+*.db
+*.db-shm
+*.db-wal
+
+# Environment / configs sensíveis
+appsettings.Development.json
+appsettings.Local.json
+
+# Others
+*.swp
+*.cache
+*.metadata
