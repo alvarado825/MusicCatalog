@@ -60,7 +60,6 @@ namespace MusicCatalog.Application.UseCases.Tracks.Commands.CreateTrack
 
         private async Task EnsureTrackUniqueForArtistAsync(CreateTrackRequest request, CancellationToken cancellationToken)
         {
-            string trackName = new TrackName(request.Name).Value;
 
             var trackAlreadyExistForThisArtist = await _unitOfWork.TrackRepository.ExistsAsync(x => x.ArtistId == request.ArtistId &&
                                                                                                x.Name == new TrackName(request.Name),

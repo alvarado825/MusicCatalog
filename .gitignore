@@ -20,6 +20,7 @@ Thumbs.db
 # Environment / configs sensíveis
 appsettings.Development.json
 appsettings.Local.json
+*.csproj.user
 
 # Others
 *.swp
