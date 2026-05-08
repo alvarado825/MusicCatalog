@@ -160,7 +160,7 @@ https://localhost:{porta}/swagger
 
 **Use Cases isolados** — cada funcionalidade tem seu próprio Use Case. O controller apenas recebe a requisição e delega. Nenhuma regra de negócio nos controllers.
 
-**Entidades com comportamento** — sem setters públicos. A entidade controla seu próprio estado via métodos (`Publish()`, `Deactivate()`), impedindo estados inválidos.
+**Entidades com comportamento** — propriedades com acesso controlado. O estado é alterado via métodos que encapsulam validação (ChangeName(), Publish(), Deactivate()), impedindo valores inválidos.
 
 **Track como foco** — Artist e Genre existem como referências, simplificados intencionalmente. A complexidade está onde faz sentido: no ciclo de vida da Track.
 

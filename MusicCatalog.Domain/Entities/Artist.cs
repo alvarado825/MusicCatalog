@@ -10,7 +10,7 @@ namespace MusicCatalog.Domain.Entities
 
         public int Id { get; private set; }
         public ArtistName Name { get; private set; }
-        public string? Biography {get; set;}
+        public string? Biography {get; private set;}
 
         private readonly List<Album> _albums = new List<Album>();
         public IReadOnlyCollection<Album> Albums => _albums;
